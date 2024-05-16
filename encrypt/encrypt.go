@@ -4,7 +4,7 @@ import (
 	"encoding/hex"
 	"strings"
 
-	"github.com/gogf/gf/crypto/gaes"
+	"github.com/gogf/gf/v2/crypto/gaes"
 	"github.com/yunbyte/gf-contrib/v2/consts"
 )
 
