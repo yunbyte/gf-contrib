@@ -15,8 +15,8 @@ import (
 
 	"github.com/gogf/gf/v2/database/gredis"
 	"github.com/gogf/gf/v2/text/gstr"
-	"github.com/yunbyte/gf-contrib/consts"
-	"github.com/yunbyte/gf-contrib/encrypt"
+	"github.com/yunbyte/gf-contrib/v2/consts"
+	"github.com/yunbyte/gf-contrib/v2/encrypt"
 )
 
 // Redis is an implement of Adapter using go-redis.
