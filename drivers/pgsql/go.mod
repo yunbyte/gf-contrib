@@ -6,7 +6,7 @@ require (
 	github.com/gogf/gf/contrib/drivers/pgsql/v2 v2.7.1
 	github.com/gogf/gf/v2 v2.7.1
 	github.com/lib/pq v1.10.9
-	github.com/yunbyte/gf-contrib v0.0.0-00010101000000-000000000000
+	github.com/yunbyte/gf-contrib/v2 v2.7.0
 )
 
 require github.com/gogf/gf v1.16.9 // indirect
@@ -35,4 +35,4 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 
-replace github.com/yunbyte/gf-contrib => ../../
+replace github.com/yunbyte/gf-contrib/v2 => ../../

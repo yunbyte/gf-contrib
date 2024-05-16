@@ -1,4 +1,4 @@
-module github.com/yunbyte/gf-contrib
+module github.com/yunbyte/gf-contrib/v2
 
 go 1.22.2
 

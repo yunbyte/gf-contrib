@@ -15,8 +15,8 @@ import (
 	"github.com/gogf/gf/v2/errors/gerror"
 	"github.com/gogf/gf/v2/text/gregex"
 	"github.com/gogf/gf/v2/text/gstr"
-	"github.com/yunbyte/gf-contrib/consts"
-	"github.com/yunbyte/gf-contrib/encrypt"
+	"github.com/yunbyte/gf-contrib/v2/consts"
+	"github.com/yunbyte/gf-contrib/v2/encrypt"
 )
 
 // Open creates and returns an underlying sql.DB object for pgsql.

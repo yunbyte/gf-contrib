@@ -5,7 +5,7 @@ import (
 	"strings"
 
 	"github.com/gogf/gf/crypto/gaes"
-	"github.com/yunbyte/gf-contrib/consts"
+	"github.com/yunbyte/gf-contrib/v2/consts"
 )
 
 // EncryptStringAES sensitive text encryption
