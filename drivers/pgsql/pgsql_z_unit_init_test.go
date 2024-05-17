@@ -7,7 +7,7 @@
 package pgsql_test
 
 import (
-	_ "github.com/gogf/gf/contrib/drivers/pgsql/v2"
+	_ "github.com/yunbyte/gf-contrib/drivers/pgsql/v2"
 
 	"context"
 	"fmt"

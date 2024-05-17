@@ -15,7 +15,7 @@ import (
 	"github.com/gogf/gf/v2/os/gctx"
 	"github.com/gogf/gf/v2/test/gtest"
 
-	"github.com/gogf/gf/contrib/drivers/pgsql/v2"
+	"github.com/yunbyte/gf-contrib/drivers/pgsql/v2"
 )
 
 func Test_LastInsertId(t *testing.T) {
