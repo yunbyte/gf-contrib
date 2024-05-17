@@ -45,12 +45,16 @@ func init() {
 // New creates and returns a redis adapter using go-redis.
 func New(config *gredis.Config) *Redis {
 	fillWithDefaultConfiguration(config)
+	username := encrypt.MustDecryptAES(config.User, consts.EncryptAESKey, consts.EncryptAESIV)
+	password := encrypt.MustDecryptAES(config.Pass, consts.EncryptAESKey, consts.EncryptAESIV)
+	sentinelUsername := encrypt.MustDecryptAES(config.SentinelUser, consts.EncryptAESKey, consts.EncryptAESIV)
+	sentinelPassword := encrypt.MustDecryptAES(config.SentinelPass, consts.EncryptAESKey, consts.EncryptAESIV)
 	opts := &redis.UniversalOptions{
 		Addrs:            gstr.SplitAndTrim(config.Address, ","),
-		Username:         encrypt.MustDecryptAES(config.User, consts.EncryptAESKey, consts.EncryptAESIV),
-		Password:         encrypt.MustDecryptAES(config.Pass, consts.EncryptAESKey, consts.EncryptAESIV),
-		SentinelUsername: encrypt.MustDecryptAES(config.SentinelUser, consts.EncryptAESKey, consts.EncryptAESIV),
-		SentinelPassword: encrypt.MustDecryptAES(config.SentinelPass, consts.EncryptAESKey, consts.EncryptAESIV),
+		Username:         username,
+		Password:         password,
+		SentinelUsername: sentinelUsername,
+		SentinelPassword: sentinelPassword,
 		DB:               config.Db,
 		MaxRetries:       defaultMaxRetries,
 		PoolSize:         config.MaxActive,

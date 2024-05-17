@@ -1,15 +1,12 @@
-module github.com/yunbyte/gf-contrib/drivers/pgsql/v2
+module github.com/gogf/gf/contrib/drivers/pgsql/v2
 
-go 1.22.2
+go 1.18
 
 require (
-	github.com/gogf/gf/contrib/drivers/pgsql/v2 v2.7.1
-	github.com/gogf/gf/v2 v2.7.1
+	github.com/gogf/gf/v2 v2.7.0
 	github.com/lib/pq v1.10.9
-	github.com/yunbyte/gf-contrib/v2 v2.7.0
+	github.com/yunbyte/gf-contrib/v2 v2.0.0-00010101000000-000000000000
 )
-
-require github.com/gogf/gf v1.16.9 // indirect
 
 require (
 	github.com/BurntSushi/toml v1.3.2 // indirect

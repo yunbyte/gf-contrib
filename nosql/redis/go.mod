@@ -1,11 +1,11 @@
-module github.com/yunbyte/gf-contrib/nosql/redis/v2
+module github.com/gogf/gf/contrib/nosql/redis/v2
 
-go 1.22.2
+go 1.18
 
 require (
-	github.com/gogf/gf/v2 v2.7.1
+	github.com/gogf/gf/v2 v2.7.0
 	github.com/redis/go-redis/v9 v9.2.1
-	github.com/yunbyte/gf-contrib/v2 v2.7.0
+	github.com/yunbyte/gf-contrib/v2 v2.0.0-00010101000000-000000000000
 	go.opentelemetry.io/otel v1.14.0
 	go.opentelemetry.io/otel/trace v1.14.0
 )
@@ -19,7 +19,6 @@ require (
 	github.com/fsnotify/fsnotify v1.7.0 // indirect
 	github.com/go-logr/logr v1.2.3 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect
-	github.com/gogf/gf v1.16.9 // indirect
 	github.com/gorilla/websocket v1.5.1 // indirect
 	github.com/grokify/html-strip-tags-go v0.1.0 // indirect
 	github.com/magiconair/properties v1.8.7 // indirect

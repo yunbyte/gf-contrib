@@ -30,11 +30,12 @@ func (d *Driver) Open(config *gdb.ConfigNode) (db *sql.DB, err error) {
 		// ============================================================================
 		// Deprecated from v2.2.0.
 		// ============================================================================
-		source = encrypt.MustDecryptAES(config.Link, consts.EncryptAESKey, consts.EncryptAESIV)
 
+		source = encrypt.MustDecryptAES(config.Link, consts.EncryptAESKey, consts.EncryptAESIV)
 		// Custom changing the schema in runtime.
 		if config.Name != "" {
-			source, _ = gregex.ReplaceString(`dbname=([\w\.\-]+)+`, "dbname="+config.Name, source)
+			dbname := encrypt.MustDecryptAES(config.Name, consts.EncryptAESKey, consts.EncryptAESIV)
+			source, _ = gregex.ReplaceString(`dbname=([\w\.\-]+)+`, "dbname="+dbname, source)
 		}
 	} else {
 		user := encrypt.MustDecryptAES(config.User, consts.EncryptAESKey, consts.EncryptAESIV)
@@ -55,7 +56,8 @@ func (d *Driver) Open(config *gdb.ConfigNode) (db *sql.DB, err error) {
 		}
 
 		if config.Namespace != "" {
-			source = fmt.Sprintf("%s search_path=%s", source, encrypt.MustDecryptAES(config.Namespace, consts.EncryptAESKey, consts.EncryptAESIV))
+			namespace := encrypt.MustDecryptAES(config.Namespace, consts.EncryptAESKey, consts.EncryptAESIV)
+			source = fmt.Sprintf("%s search_path=%s", source, namespace)
 		}
 
 		if config.Timezone != "" {
