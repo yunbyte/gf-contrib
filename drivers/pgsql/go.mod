@@ -1,11 +1,11 @@
-module github.com/gogf/gf/contrib/drivers/pgsql/v2
+module github.com/yunbyte/gf-contrib/drivers/pgsql/v2
 
 go 1.18
 
 require (
 	github.com/gogf/gf/v2 v2.7.0
 	github.com/lib/pq v1.10.9
-	github.com/yunbyte/gf-contrib/v2 v2.0.0-00010101000000-000000000000
+	github.com/yunbyte/gf-contrib/v2 v2.7.0
 )
 
 require (
@@ -32,4 +32,4 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 
-replace github.com/yunbyte/gf-contrib/v2 => ../../
+// replace github.com/yunbyte/gf-contrib/v2 => ../../
